@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Python Coding Style &#8212; fabric-sdk-py  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="python-coding-style">
+<h1>Python Coding Style<a class="headerlink" href="#python-coding-style" title="Permalink to this headline">¶</a></h1>
+<p>In order to make the code more maintainable, and helps developers understand code in reviews, we have a set of style guidelines for clarity.</p>
+<ul class="simple">
+<li><p>Please read <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">pep8 style guide</a> before you try to contribute any code. The guidelines gives some basic coding conventions, including:</p>
+<ul>
+<li><p>Code lay-out</p></li>
+<li><p>String Quotes</p></li>
+<li><p>Naming Conventions</p></li>
+<li><p>Comments</p></li>
+</ul>
+</li>
+<li><p>Some general guidelines you should follow like following when you write SDK code:</p>
+<ul>
+<li><p>Use only UNIX style newlines (\n), not Windows style (\r\n)</p></li>
+<li><p>It is preferred to wrap long lines in parentheses and not a backslash for line continuation.</p></li>
+<li><p>Do not import more than one module per line</p></li>
+<li><p>Docstrings should not start with a space.</p></li>
+<li><p>Multi line docstrings should end on a new line.</p></li>
+<li><p>Multi line docstrings should start without a leading new line.</p></li>
+<li><p>Multi line docstrings should start with a one line summary followed by an empty line.</p></li>
+</ul>
+</li>
+<li><p>For every api which will be used by our client, the api Docstrings are mandatory. The Google style guide contains an excellent Python style guide, we should follow. For example:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">square_root</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculate the square root of a number.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        n: the number to get the square root of.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        the square root of n.</span>
+<span class="sd">    Raises:</span>
+<span class="sd">        TypeError: if n is not a number.</span>
+<span class="sd">        ValueError: if n is negative.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>To extend this style to also include type information in the arguments, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Add a new value.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        value (str): the value to add.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<div class="section" id="license-a-name-license-a">
+<h2>License <a name="license"></a><a class="headerlink" href="#license-a-name-license-a" title="Permalink to this headline">¶</a></h2>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This document is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">fabric-sdk-py</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Hyperledger Community.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/code_style.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
